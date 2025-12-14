@@ -8,7 +8,7 @@
 import Foundation
 
 public struct KCMEntryDTO: Codable {
-    public let id: UInt64
+    public let id: UUID?
     public let boardID: UInt64
     public let replyToID: UInt64?
     public let imageURL: URL
