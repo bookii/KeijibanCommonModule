@@ -1,6 +1,6 @@
 import Foundation
 
-public struct KCMEntryDTO: Codable, Sendable {
+public struct KCMEntryDTO: Codable {
     public let id: UUID?
     public let boardID: UInt64
     public let replyToID: UInt64?
@@ -8,8 +8,9 @@ public struct KCMEntryDTO: Codable, Sendable {
     public let authorName: String
     public let deleteKey: String
     public let likeCount: Int
+    public let createdAt: Date
 
-    init(id: UUID?, boardID: UInt64, replyToID: UInt64?, imageURL: URL, authorName: String, deleteKey: String, likeCount: Int) {
+    init(id: UUID?, boardID: UInt64, replyToID: UInt64?, imageURL: URL, authorName: String, deleteKey: String, likeCount: Int, createdAt: Date) {
         self.id = id
         self.boardID = boardID
         self.replyToID = replyToID
@@ -17,6 +18,7 @@ public struct KCMEntryDTO: Codable, Sendable {
         self.authorName = authorName
         self.deleteKey = deleteKey
         self.likeCount = likeCount
+        self.createdAt = createdAt
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -27,5 +29,6 @@ public struct KCMEntryDTO: Codable, Sendable {
         case authorName = "author_name"
         case deleteKey = "delete_key"
         case likeCount = "like_count"
+        case createdAt = "created_at"
     }
 }
