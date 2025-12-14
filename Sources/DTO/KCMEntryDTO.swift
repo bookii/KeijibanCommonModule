@@ -1,13 +1,6 @@
-//
-//  KCMEntryDTO.swift
-//  KeijibanCommonModule
-//
-//  Created by mizznoff on 2025/12/14.
-//
-
 import Foundation
 
-public struct KCMEntryDTO: Codable {
+public struct KCMEntryDTO: Codable, Sendable {
     public let id: UUID?
     public let boardID: UInt64
     public let replyToID: UInt64?
