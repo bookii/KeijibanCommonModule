@@ -16,6 +16,16 @@ public struct KCMEntryDTO: Codable {
     public let deleteKey: String
     public let likeCount: Int
     
+    init(id: UUID?, boardID: UInt64, replyToID: UInt64?, imageURL: URL, authorName: String, deleteKey: String, likeCount: Int) {
+        self.id = id
+        self.boardID = boardID
+        self.replyToID = replyToID
+        self.imageURL = imageURL
+        self.authorName = authorName
+        self.deleteKey = deleteKey
+        self.likeCount = likeCount
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case boardID = "board_id"
