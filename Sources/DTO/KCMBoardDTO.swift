@@ -8,6 +8,6 @@
 import Foundation
 
 public struct KCMBoardDTO: Codable {
-    public let id: UInt64
+    public let id: UUID?
     public let name: String
 }
