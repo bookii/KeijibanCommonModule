@@ -1,6 +1,6 @@
 import Foundation
 
-public struct KCMBoardDTO: Codable {
+public struct KCMBoardDTO: Codable, Sendable {
     public let id: UUID?
     public let name: String
     public let index: Int
