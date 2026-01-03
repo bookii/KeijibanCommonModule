@@ -6,4 +6,8 @@ public struct KCMGetBoardsRequestQuery: Codable {
     private enum CodingKeys: String, CodingKey {
         case withEntries = "with_entries"
     }
+    
+    public init(withEntries: Bool) {
+        self.withEntries = withEntries
+    }
 }
