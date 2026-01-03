@@ -19,7 +19,7 @@ public struct KCMEntryDTO: Codable, Sendable {
         case createdAt = "created_at"
     }
 
-    public init(id: UUID?, boardId: UUID, wordImages: [KCMWordImageDTO], authorName: String, deleteKey: String, likeCount: Int?, createdAt: Date?) {
+    public init(id: UUID? = nil, boardId: UUID, wordImages: [KCMWordImageDTO], authorName: String, deleteKey: String, likeCount: Int? = nil, createdAt: Date? = nil) {
         self.id = id
         self.boardId = boardId
         self.wordImages = wordImages
