@@ -3,12 +3,12 @@ import Foundation
 public struct KCMEntryDTO: Codable, Sendable {
     public struct WordImage: Codable, Sendable {
         public let id: UUID?
-        public let imageData: String
+        public let base64EncodedImage: String
         public let index: Int
 
         private enum CodingKeys: String, CodingKey {
             case id
-            case imageData = "image_data"
+            case base64EncodedImage = "base64_encoded_image"
             case index
         }
     }
