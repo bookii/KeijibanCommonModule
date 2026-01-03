@@ -1,6 +1,6 @@
 import Foundation
 
-public struct KCMPostEntriesRequestBody: Codable {
+public struct KCMPostEntriesRequestBody: Codable, Sendable {
     public let wordImages: [KCMWordImageDTO]
     public let authorName: String
     public let deleteKey: String
