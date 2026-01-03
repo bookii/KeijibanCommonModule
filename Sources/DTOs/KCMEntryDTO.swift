@@ -17,7 +17,7 @@ public struct KCMEntryDTO: Codable, Sendable {
     public let boardId: UUID
     public let wordImages: [WordImage]
     public let authorName: String
-    public let deleteKey: String
+    public let deleteKey: String?
     public let likeCount: Int?
     public let createdAt: Date?
 
