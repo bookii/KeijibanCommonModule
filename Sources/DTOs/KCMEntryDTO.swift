@@ -1,20 +1,30 @@
 import Foundation
 
 public struct KCMEntryDTO: Codable, Sendable {
+    public struct WordImage: Codable, Sendable {
+        public let id: UUID?
+        public let imageData: String
+        public let index: Int
+
+        private enum CodingKeys: String, CodingKey {
+            case id
+            case imageData = "image_data"
+            case index
+        }
+    }
+
     public let id: UUID?
-    public let boardID: UInt64
-    public let replyToID: UInt64?
-    public let imageURL: URL
+    public let boardId: UInt64
+    public let wordImages: [WordImage]
     public let authorName: String
     public let deleteKey: String
     public let likeCount: Int
     public let createdAt: Date
 
-    init(id: UUID?, boardID: UInt64, replyToID: UInt64?, imageURL: URL, authorName: String, deleteKey: String, likeCount: Int, createdAt: Date) {
+    init(id: UUID?, boardId: UInt64, wordImages: [WordImage], authorName: String, deleteKey: String, likeCount: Int, createdAt: Date) {
         self.id = id
-        self.boardID = boardID
-        self.replyToID = replyToID
-        self.imageURL = imageURL
+        self.boardId = boardId
+        self.wordImages = wordImages
         self.authorName = authorName
         self.deleteKey = deleteKey
         self.likeCount = likeCount
@@ -23,9 +33,8 @@ public struct KCMEntryDTO: Codable, Sendable {
 
     private enum CodingKeys: String, CodingKey {
         case id
-        case boardID = "board_id"
-        case replyToID = "reply_to_id"
-        case imageURL = "image_url"
+        case boardId = "board_id"
+        case wordImages = "word_images"
         case authorName = "author_name"
         case deleteKey = "delete_key"
         case likeCount = "like_count"
