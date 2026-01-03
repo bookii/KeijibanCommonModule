@@ -18,10 +18,10 @@ public struct KCMEntryDTO: Codable, Sendable {
     public let wordImages: [WordImage]
     public let authorName: String
     public let deleteKey: String
-    public let likeCount: Int
-    public let createdAt: Date
+    public let likeCount: Int?
+    public let createdAt: Date?
 
-    init(id: UUID?, boardId: UUID, wordImages: [WordImage], authorName: String, deleteKey: String, likeCount: Int, createdAt: Date) {
+    init(id: UUID?, boardId: UUID, wordImages: [WordImage], authorName: String, deleteKey: String, likeCount: Int?, createdAt: Date?) {
         self.id = id
         self.boardId = boardId
         self.wordImages = wordImages
