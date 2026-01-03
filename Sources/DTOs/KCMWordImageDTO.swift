@@ -13,7 +13,7 @@ public struct KCMWordImageDTO: Codable, Sendable {
         case index
     }
 
-    public init(id: UUID?, entryId: UUID?, base64EncodedImage: String, index: Int) {
+    public init(id: UUID? = nil, entryId: UUID? = nil, base64EncodedImage: String, index: Int) {
         self.id = id
         self.entryId = entryId
         self.base64EncodedImage = base64EncodedImage
