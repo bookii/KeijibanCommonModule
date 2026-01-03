@@ -10,4 +10,10 @@ public struct KCMPostEntriesRequestBody: Codable {
         case authorName = "author_name"
         case deleteKey = "delete_key"
     }
+    
+    public init(wordImages: [KCMWordImageDTO], authorName: String, deleteKey: String) {
+        self.wordImages = wordImages
+        self.authorName = authorName
+        self.deleteKey = deleteKey
+    }
 }
