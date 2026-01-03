@@ -11,7 +11,7 @@ public struct KCMEntryDTO: Codable, Sendable {
             case base64EncodedImage = "base64_encoded_image"
             case index
         }
-        
+
         public init(id: UUID?, base64EncodedImage: String, index: Int) {
             self.id = id
             self.base64EncodedImage = base64EncodedImage
@@ -23,7 +23,7 @@ public struct KCMEntryDTO: Codable, Sendable {
     public let boardId: UUID
     public let wordImages: [WordImage]
     public let authorName: String
-    public let deleteKey: String?
+    public let deleteKey: String
     public let likeCount: Int?
     public let createdAt: Date?
 
