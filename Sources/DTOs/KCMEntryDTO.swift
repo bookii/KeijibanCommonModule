@@ -11,6 +11,12 @@ public struct KCMEntryDTO: Codable, Sendable {
             case base64EncodedImage = "base64_encoded_image"
             case index
         }
+        
+        public init(id: UUID?, base64EncodedImage: String, index: Int) {
+            self.id = id
+            self.base64EncodedImage = base64EncodedImage
+            self.index = index
+        }
     }
 
     public let id: UUID?
