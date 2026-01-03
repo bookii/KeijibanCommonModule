@@ -1,6 +1,6 @@
 import Foundation
 
-public struct KCMGetBoardsRequestQuery: Codable {
+public struct KCMGetBoardsRequestQuery: Codable, Sendable {
     public let withEntries: Bool
 
     private enum CodingKeys: String, CodingKey {
