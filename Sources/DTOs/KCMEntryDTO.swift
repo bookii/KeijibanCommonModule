@@ -7,7 +7,7 @@ public struct KCMEntryDTO: Codable, Sendable {
     public let authorName: String
     public let deleteKey: String
     public let likeCount: Int?
-    public let createdAt: Date?
+    public let createdAt: Int?
 
     private enum CodingKeys: String, CodingKey {
         case id
@@ -19,7 +19,7 @@ public struct KCMEntryDTO: Codable, Sendable {
         case createdAt = "created_at"
     }
 
-    public init(id: UUID? = nil, boardId: UUID, wordImages: [KCMWordImageDTO], authorName: String, deleteKey: String, likeCount: Int? = nil, createdAt: Date? = nil) {
+    public init(id: UUID? = nil, boardId: UUID, wordImages: [KCMWordImageDTO], authorName: String, deleteKey: String, likeCount: Int? = nil, createdAt: Int? = nil) {
         self.id = id
         self.boardId = boardId
         self.wordImages = wordImages
