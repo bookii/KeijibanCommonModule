@@ -1,9 +1,13 @@
 import Foundation
 
 public struct KCMDeleteEntriesRequestQuery: Codable, Sendable {
-    public let key: String
+    public let deleteKey: String
 
-    public init(key: String) {
-        self.key = key
+    private enum CodingKeys: String, CodingKey {
+        case deleteKey = "delete_key"
+    }
+
+    public init(deleteKey: String) {
+        self.deleteKey = deleteKey
     }
 }
